@@ -1,5 +1,14 @@
-read -p "Enter filename: " FNAME
+#!/usr/bin/bash
 
-echo $( mawk -f $FNAME
-BEGIN
-if () )
+read -p "Enter name of file" filename
+read -p "Enter pattern" pattern
+
+count=$( grep -E "$pattern" "$filename" | wc -l )
+
+if [[ count -gt 0 ]]; then
+	echo "Sequence is present in file"
+else 
+	echo "Sequence is not present in file"
+fi
+
+echo "Exit code is $?"

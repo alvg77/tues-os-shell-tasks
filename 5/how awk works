@@ -1,0 +1,6 @@
+works on the basis:
+event -> command to execute in case of event
+
+BEGIN - executes before everithing else
+END - executes after everithing else
+
