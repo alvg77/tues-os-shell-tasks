@@ -1,5 +1,6 @@
-#!/usr/bin/bash
+#!/bin/bash
 
-read -p "Enter directory full name: " DIR
+read -p "Enter the full name of a directory: " VAR
 
-echo $(ls $DIR | wc -l)
+echo -e "Files: $(find $VAR -type f | wc -l)"
+echo -e "Directories: $(find $VAR -type d | wc -l)"
